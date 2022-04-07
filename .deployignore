@@ -1,4 +1,4 @@
-__pycache__
-.venv
-.vscode
-README.md
+./__pycache__
+./.venv
+./.vscode
+./README.md
