@@ -1,0 +1,21 @@
+name: Release on tag
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Trim Deployment
+        run: |
+          chmod 775 ./trim.sh
+          ./trim.sh 
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
