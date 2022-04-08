@@ -14,8 +14,8 @@ jobs:
 
       - name: Trim Deployment
         run: |
-          chmod 775 ./trim.sh
-          ./trim.sh 
+          chmod 775 ./deploy/trim.sh
+          ./deploy/trim.sh 
 
       - name: Release
         uses: softprops/action-gh-release@v1
