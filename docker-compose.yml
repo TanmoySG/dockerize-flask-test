@@ -1,10 +1,12 @@
 version: '3.4'
 
 services:
-  dockerizeflasktest:
-    image: dockerizeflasktest
+  testimg:
+    image: testimg
     build:
       context: .
       dockerfile: ./Dockerfile
     ports:
       - 5000:5000
+    volumes:
+      - ${PWD}/testdata.json:/app/testdata.json

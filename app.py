@@ -1,10 +1,13 @@
+import json
 import flask
 app = flask.Flask(__name__)
 
 
 @app.route("/") 
 def hello_world(): 
-	return "<p>Hello, World from the Container!</p>"
+    with open("testdata.json", "r") as objec:
+        data = json.load(objec)
+        return data
 
 
 if __name__ == '__main__':
