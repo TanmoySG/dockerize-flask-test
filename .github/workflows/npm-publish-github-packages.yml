@@ -40,6 +40,8 @@ jobs:
       - run: |
           cd /home/runner/work/dockerize-flask-test/dockerize-flask-test/js
           npm install
+      - name: Set up NPM authentication
+        run: echo "//npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}" >> ~/.npmrc
       - run: |
           cd /home/runner/work/dockerize-flask-test/dockerize-flask-test/js
           npm publish --registry=https://npm.pkg.github.com/
