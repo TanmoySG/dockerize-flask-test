@@ -19,11 +19,11 @@ jobs:
         with:
           node-version: 16
       - run: |
-        cd ./js
-        ls
+          cd ./js
+          ls
       - run: |
-        cd ./js
-        npm install
+          cd ./js
+          npm install
 
   publish-gpr:
     needs: build
