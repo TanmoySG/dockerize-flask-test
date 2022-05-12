@@ -37,7 +37,11 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
-      - run: npm install
-      - run: npm publish
+      - run: |
+          cd /home/runner/work/dockerize-flask-test/dockerize-flask-test/js
+          npm install
+      - run: |
+          cd /home/runner/work/dockerize-flask-test/dockerize-flask-test/js
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
