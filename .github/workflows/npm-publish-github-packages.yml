@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 16
       - run: |
-          cd ./js && ls
+          cd ./js && pwd
       - run: |
           cd ./js
           npm install
