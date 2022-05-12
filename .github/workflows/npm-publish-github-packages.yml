@@ -20,9 +20,9 @@ jobs:
           node-version: 16
       - run: |
           cd ./js && pwd 
-          ls
+          cd /home/runner/work/dockerize-flask-test/dockerize-flask-test/js && ls
       - run: |
-          cd ./js
+          cd /home/runner/work/dockerize-flask-test/dockerize-flask-test/js
           npm install
 
   publish-gpr:
